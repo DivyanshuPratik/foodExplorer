@@ -1,0 +1,78 @@
+/* Login.css */
+
+/* Main container */
+.Login-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 80%;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  /* Form container */
+  .login-form {
+    margin-bottom: 20px;
+  }
+  
+  /* Close icon style */
+  .login-form img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  /* Inputs container */
+  .login-popup-inputs {
+    margin-bottom: 20px;
+  }
+  
+  /* Input field styles */
+  .login-popup-inputs input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Button style */
+  .login-button {
+    background-color: tomato;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  .login-button:hover {
+    background-color: red; /* Darker tomato shade on hover */
+  }
+  
+  /* Terms of use and policy text */
+  .Login-popup p {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  /* Link style for switching between Sign Up and Login */
+  .Login-popup p span {
+    color: dodgerblue;
+    cursor: pointer;
+  }
+  
+  .Login-popup p span:hover {
+    text-decoration: underline;
+  }
+  

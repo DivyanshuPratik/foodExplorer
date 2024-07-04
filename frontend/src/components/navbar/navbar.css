@@ -1,0 +1,62 @@
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0px 15px;
+}
+.logo{
+    /* height: 70px; */
+    width: 120px;
+}
+.cart-count{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    background-color: rgb(20, 29, 127);
+    color: white;
+    height: 20px;
+    width: 20px;
+    font-size: 10px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 40px;
+    left: 30px;
+}
+ul{
+    display: flex;
+    width: 305px;
+    gap: 10px;
+    justify-content: space-between;
+    list-style-type:none ;
+}
+ul li{
+    cursor: pointer;
+}
+.app{
+    width: 80%;
+    margin: auto;
+}
+.icon-container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.signIn{
+    height: 40px;
+    width: 85px;
+    border-radius: 20px;
+    font-size: 13px;
+    border: 1px solid tomato;
+    background-color: #cccccc;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.signIn:hover{
+    background-color: tomato;
+    color: #ffffff;
+}
+.active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}

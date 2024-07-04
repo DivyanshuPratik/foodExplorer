@@ -1,0 +1,96 @@
+/* cart.css */
+
+.cart {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-items {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .cart-items-title {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+  }
+  
+  .cart-items-title p {
+    text-align: center;
+  }
+  
+  .cart-items-item {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .cart-items-item img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 4px;
+  }
+  
+  .cart-items-item p {
+    text-align: center;
+  }
+  
+  .cart-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  
+  .cart-totals {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .cart-totals h2 {
+    margin-bottom: 10px;
+  }
+  
+  .cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .cart-total-details p {
+    font-weight: bold;
+  }
+  
+  .payup {
+    background-color: tomato;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .payup:hover {
+    background-color: red; /* Darker tomato shade on hover */
+  }
+  
+  .cross {
+    cursor: pointer;
+    color: red;
+  }
+  
+  .cross:hover {
+    text-decoration: underline;
+  }
+  
