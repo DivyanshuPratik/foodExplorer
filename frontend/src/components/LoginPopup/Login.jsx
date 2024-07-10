@@ -4,7 +4,11 @@ import './Login.css';
 
 const Login = ({ setShowLogin }) => {
     const [currState, setCurrState] = useState("Sign Up");
-
+    const [data,setData] = useState({
+        name:"",
+        email:"",
+        password:""
+    })
     return (
         <div className='Login-popup'>
             <form className='login-form'>

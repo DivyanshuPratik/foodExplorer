@@ -1,0 +1,68 @@
+/* List.css */
+
+.list {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.list p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.list-table-format {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list-table-format.title {
+    background-color: tomato;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.list-table-format.title b {
+    flex: 1;
+    text-align: center;
+}
+
+.list-table-format img {
+    flex: 1;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.list-table-format p {
+    flex: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.list-table-format p:nth-child(5) {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.list-table-format p:nth-child(5):hover {
+    text-decoration: underline;
+}
