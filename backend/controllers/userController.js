@@ -33,6 +33,7 @@ const LoginUser = async(req,res)=>{
 }
 
 const RegisterUser = async(req,res)=>{
+    console.log("hitting");
     try {    
         const {name,email,password} = req.body;
         if (!validator.isEmail(email)) {
