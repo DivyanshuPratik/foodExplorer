@@ -7,6 +7,7 @@ import { default as foodRouter } from './routes/foodRoute.js';
 import userRouter from './routes/userRoutes.js';
 import cartRouter from './routes/cartRoute.js';
 import authMiddleware from './middlewares/auth.js'
+import orderRouter from './routes/orderRoute.js';
 const uri = "mongodb://localhost:27017/FoodSite";
 connect(uri)
 
@@ -15,6 +16,7 @@ app.use(json());
 app.use(cors());
 app.use("/images",express.static("uploads"))
 //API ENDPOINTS
+app.use("/api/order",orderRouter)
 app.use("/api/cart",authMiddleware,cartRouter)
 app.use("/api/user",userRouter)
 app.use("/api/food",foodRouter)
