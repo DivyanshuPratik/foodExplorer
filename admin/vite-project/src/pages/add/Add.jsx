@@ -22,7 +22,7 @@ const Add = () => {
             formData.append("price", Number(data.price));
             formData.append("category", data.category);
             const response = await axios.post(
-                "http://localhost:3000/api/food/add",
+                "https://foodexplorer-b7zr.onrender.com/api/food/add",
                 formData
             );
             if (response.data.success) {

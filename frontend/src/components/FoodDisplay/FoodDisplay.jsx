@@ -3,26 +3,26 @@ import "./foodDisplay.css";
 import { StoreContext } from "../../context/storeContext";
 import axios from 'axios'
 const FoodDisplay = ({ category }) => {
-  const { food_list, setFoodList ,cartItems, addToCart, removeFromCart } = useContext(StoreContext);
-  const fetchFoodList = async ()=>{
+  const { food_list, setFoodList, cartItems, addToCart, removeFromCart } = useContext(StoreContext);
+  const fetchFoodList = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/api/food/list");
+      const response = await axios.get("https://foodexplorer-b7zr.onrender.com/api/food/list");
       setFoodList(response.data.data)
     } catch (error) {
-      
+
     }
   }
-  useEffect(()=>{
+  useEffect(() => {
     fetchFoodList();
-  },[])
+  }, [])
   const renderFoodItem = (item) => {
     const itemCount = cartItems[item._id] || 0;
 
     return (
       <div className="food-item" key={item._id}>
         <div className="image-container">
-        {/* {item.image}  */}
-          <img src={`http://localhost:3000/images/${item.Image}`} className="itemImg" alt={item.name} />
+          {/* {item.image}  */}
+          <img src={`https://foodexplorer-b7zr.onrender.com/images/${item.Image}`} className="itemImg" alt={item.name} />
           {itemCount > 0 ? (
             <div className="item-count fade-in">
               <button className="decrement-button" onClick={() => removeFromCart(item._id)}>

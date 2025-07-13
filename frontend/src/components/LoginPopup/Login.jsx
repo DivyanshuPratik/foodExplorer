@@ -20,14 +20,14 @@ const Login = ({ setShowLogin }) => {
 
         try {
             if (currState === "Sign Up") {
-                const response = await axios.post("http://localhost:3000/api/user/register", data);
+                const response = await axios.post("https://foodexplorer-b7zr.onrender.com/api/user/register", data);
                 setCurrState("Login");
                 setData({ name: "", email: "", password: "" });
                 toast.success("Account created successfully");
             } else {
-                const response = await axios.post("http://localhost:3000/api/user/login", data);
+                const response = await axios.post("https://foodexplorer-b7zr.onrender.com/api/user/login", data);
                 setToken(response.data.token);
-                localStorage.setItem("token",response.data.token)
+                localStorage.setItem("token", response.data.token)
                 setShowLogin(false);
                 toast.success("Logged In Successfully");
             }
@@ -38,7 +38,7 @@ const Login = ({ setShowLogin }) => {
 
     return (
         <>
-           
+
             <div className='overlay' onClick={() => setShowLogin(false)}></div>
             <div className='Login-popup'>
                 <form className='login-form' onSubmit={handleSubmit}>

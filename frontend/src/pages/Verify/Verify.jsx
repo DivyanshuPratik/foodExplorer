@@ -4,28 +4,28 @@ import { useNavigate, useSearchParams } from 'react-router-dom'
 import axios from 'axios';
 const Verify = () => {
 
-    const [searchParams,setSearchParams] = useSearchParams();
+    const [searchParams, setSearchParams] = useSearchParams();
     const success = searchParams.get("success");
     const orderId = searchParams.get("orderId");
     const navigate = useNavigate();
-    console.log(success,orderId);
-    const verifyPayment = async() => {
-        const response = await axios.post("http://localhost:3000/api/order/verify",{success,orderId})
-        if(response.data.success){
+    console.log(success, orderId);
+    const verifyPayment = async () => {
+        const response = await axios.post("https://foodexplorer-b7zr.onrender.com/api/order/verify", { success, orderId })
+        if (response.data.success) {
             navigate("/myorders");
         }
-        else{
+        else {
             navigate("/")
         }
     }
-    useEffect(()=>{
+    useEffect(() => {
         verifyPayment();
-    },[])
+    }, [])
     return (
-    <div className='verify'>
-      <div className="spinner"></div>
-    </div>
-  )
+        <div className='verify'>
+            <div className="spinner"></div>
+        </div>
+    )
 }
 
 export default Verify
